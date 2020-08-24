@@ -29,7 +29,6 @@ def create
 end
 
 def update
-    
     if @article.update(article_params)
         flash[:notice] = "Article is successfully updated"
         redirect_to @article
@@ -39,7 +38,6 @@ def update
 end
 
 def destroy
-    
     @article.destroy
     redirect_to articles_path
 end
