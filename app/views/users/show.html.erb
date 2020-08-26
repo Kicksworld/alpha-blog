@@ -2,6 +2,16 @@
 
 <%= gravatar_for @user, size:200 %>
 
+<div class="text-center mt-4">
+    <%=link_to "Edit Profile", edit_user_path(@user), class: "btn btn-outline-info"%>
+</div>
+
 <h3 class="text-center mt-4">Articles</h3> 
 
 <%= render 'articles/article' %>
+
+<ul class="pagination justify-content-center mb-5">
+<div class="flickr_pagination">
+<%== pagy_nav(@pagy)%>
+</div>
+</ul>

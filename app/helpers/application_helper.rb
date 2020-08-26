@@ -1,5 +1,7 @@
 module ApplicationHelper
 
+include Pagy::Frontend
+
 def gravatar_for(user, options = { size: 80 } )
 
     email_address = user.email.downcase
